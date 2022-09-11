@@ -5,6 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloWorldController {
+    @GetMapping()
+    public String name() {
+        return "Successfully started";
+    }
+    
     @GetMapping(value = "hello")
     public String getHelloWorld() {
         return "Hello Paul";
